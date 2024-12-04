@@ -1,0 +1,145 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #01250c, #011109);
+  color: #fff; /* Ensure all text contrasts with the background */
+}
+
+/* Wrapper */
+.wrapper {
+  width: 65vmin;
+  height: 70vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #072919, #04351e);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  border: 2px solid #032b0a;
+}
+
+/* Game Details */
+.game-details {
+  color: #E2F1E9;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 20px 27px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #0a1f0d;
+}
+
+/* Play Board */
+.play-board {
+  height: 500%;
+  width: 110%;
+  display: grid;
+  background: url('https://raw.githubusercontent.com/amandak4/P3-R2/refs/heads/main/39f1ee105d3c2347fee07f6cb078c2f0.png') no-repeat center center;
+  background-size: cover;
+  grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+  border: 1px solid #0c3424;
+}
+.play-board .food {
+  width: 180%;
+  height: 200%;
+  background: url('https://raw.githubusercontent.com/amandak4/P3-R2/refs/heads/main/medusasprite.gif') no-repeat center center;
+background-size: contain
+}
+
+.play-board .head {
+  
+  background: url('https://media.istockphoto.com/id/934364808/vector/seamless-texture-with-a-reptile-skin-snake-skin.jpg?s=612x612&w=0&k=20&c=2gGwzL5jNfyqqP_cbzDRtLotmfomYkHo4y00Hj_eCIw=') no-repeat center center;
+}
+.controls {
+  display: none;
+  justify-content: space-between;
+}
+.controls i {
+  padding: 25px 0;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #011b0f;
+  width: calc(100% / 4);
+  cursor: pointer;
+  border-right: 1px solid #171B26;
+}
+@media screen and (max-width: 800px) {
+  .wrapper {
+    width: 90vmin;
+    height: 115vmin;
+  }
+  .game-details {
+    font-size: 1rem;
+    padding: 15px 27px;
+  }
+  .controls {
+    display: flex;
+  }
+  .controls i {
+    padding: 15px 0;
+    font-size: 1rem;
+  }
+}
+
+.game-over {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.game-over.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.game-over h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.game-over p {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.game-over button {
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  color: #fff;
+  background: #4a9456;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.game-over button:hover {
+  background: #367d45;
+}

@@ -19,12 +19,6 @@ let highScore = localStorage.getItem("high-score") || 0;
 highScoreElement.innerText = `High Score: ${highScore}`;
 
 const updateFoodPosition = () => {
-  const minX = 50; // Minimum X in pixels
-  const maxX = 450; // Maximum X in pixels
-  const minY = 50; // Minimum Y in pixels
-  const maxY = 450; // Maximum Y in pixels
-
-
   foodX = Math.floor(Math.random() * 30) + 1;
   foodY = Math.floor(Math.random() * 30) + 1;
 };
@@ -100,3 +94,10 @@ const initGame = () => {
 updateFoodPosition();
 setIntervalId = setInterval(initGame, 100);
 document.addEventListener("keyup", changeDirection);
+function isCollision(snakeX, snakeY, foodX, foodY) {
+  const collisionRadius = 2; // Increase the collision radius
+  return (
+    Math.abs(snakeX - foodX) <= collisionRadius &&
+    Math.abs(snakeY - foodY) <= collisionRadius
+  );
+}

@@ -125,7 +125,7 @@ const difficulties = {
   easy: {
     interval: 100,
     setup: () => {
-      playBoard.style.background = "006400"; // Background for easy
+      playBoard.style.background = "url('39f1ee105d3c2347fee07f6cb078c2f0.png')"; // Background for easy
       obstacles = []; // No obstacles for easy
     },
     update: () => {} // No extra behavior
@@ -133,7 +133,7 @@ const difficulties = {
   medium: {
     interval: 90,
     setup: () => {
-      playBoard.style.background = "#191970"; // Background for medium
+      playBoard.style.background= "url('backgroundmediumdiff.png')"; // Background for medium
       addObstacles();
     },
     update: () => {} // No extra behavior
@@ -141,10 +141,10 @@ const difficulties = {
   hard: {
     interval: 80,
     setup: () => {
-      playBoard.style.background = "darkred"; // Background for hard
+      playBoard.style.background = "url('backgroundharddiff.png')";
       addObstacles();
     },
-    update: () => moveFood() // Moves food each frame
+    update: () => {} // Moves food each frame
   }
 };
 

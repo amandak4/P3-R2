@@ -47,7 +47,7 @@ body {
 
 /* Play Board */
 .play-board {
-  background-color: #011309;
+  background-image: url('39f1ee105d3c2347fee07f6cb078c2f0.png');
   height: 500%;
   width: 110%;
   display: grid;
@@ -90,11 +90,15 @@ background-size: contain
   }
   .controls {
     display: flex;
+    justify-content: center; 
+    gap: 10px; 
+    margin-top: 2px; 
   }
   .controls i {
     padding: 15px 0;
     font-size: 1rem;
   }
+
 }
 
 .game-over {
@@ -151,8 +155,9 @@ background-size: contain
   display: flex;
   justify-content: center;
   gap: 15px;
-  margin: 15px 0;
+  margin-top: 20px;
 }
+
 
 .difficulty-button {
   padding: 10px 20px;
@@ -198,6 +203,7 @@ background-size: contain
   justify-content: center;
   gap: 15px;
   margin: 0; 
+
   position: absolute;
   bottom: 24px; 
   left: 50%;

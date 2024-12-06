@@ -26,11 +26,13 @@ body {
   flex-direction: column;
   justify-content: center;
   border-radius: 15px;
-  background: linear-gradient(145deg, #072919, #04351e);
+  background: linear-gradient(145deg, #0f442b, #04351e);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
   overflow: hidden;
   border: 2px solid #032b0a;
 }
+
+
 
 /* Game Details */
 .game-details {
@@ -45,10 +47,10 @@ body {
 
 /* Play Board */
 .play-board {
+  background-color: #011309;
   height: 500%;
   width: 110%;
   display: grid;
-  background: url('https://raw.githubusercontent.com/amandak4/P3-R2/refs/heads/main/39f1ee105d3c2347fee07f6cb078c2f0.png') no-repeat center center;
   background-size: cover;
   grid-template: repeat(30, 1fr) / repeat(30, 1fr);
   border: 1px solid #0c3424;
@@ -142,4 +144,83 @@ background-size: contain
 
 .game-over button:hover {
   background: #367d45;
+}
+
+/* Difficulty Selector */
+.difficulty-selector {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.difficulty-button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(145deg, #045329, #03843c);
+  border: 2px solid #032b0a;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: background 0.3s, transform 0.3s;
+}
+
+.difficulty-button:hover {
+  background: linear-gradient(145deg, #03843c, #045329);
+  transform: scale(1.05);
+}
+
+.difficulty-button:active {
+  background: #02391c;
+  transform: scale(0.98);
+}
+
+.difficulty-button.easy {
+  background: linear-gradient(145deg, #6cbf6a, #4a9456);
+}
+
+.difficulty-button.medium {
+  background: linear-gradient(145deg, #f0ad4e, #d98b2c);
+}
+
+.difficulty-button.hard {
+  background: linear-gradient(145deg, #d9534f, #b52c28);
+
+
+}
+
+
+
+.difficulty-selector {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 0; 
+  position: absolute;
+  bottom: 24px; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10%; 
+}
+/* Obstacles Styling */
+.play-board .obstacle {
+  background: url('https://www.shareicon.net/data/512x512/2015/10/17/657482_circle_512x512.png') no-repeat center center;
+  background-size: contain;
+}
+
+/* Moving Food Styling */
+.play-board .moving-food {
+  animation: move-food 1.5s infinite alternate;
+}
+
+/* Keyframe Animation for Moving Food */
+@keyframes move-food {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(10px, 10px);
+  }
 }

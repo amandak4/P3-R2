@@ -94,10 +94,3 @@ const initGame = () => {
 updateFoodPosition();
 setIntervalId = setInterval(initGame, 100);
 document.addEventListener("keyup", changeDirection);
-function isCollision(snakeX, snakeY, foodX, foodY) {
-  const collisionRadius = 2; // Increase the collision radius
-  return (
-    Math.abs(snakeX - foodX) <= collisionRadius &&
-    Math.abs(snakeY - foodY) <= collisionRadius
-  );
-}

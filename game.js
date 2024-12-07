@@ -142,19 +142,20 @@ const difficulties = {
     interval: 80,
     setup: () => {
       playBoard.style.background = "url('backgroundharddiff.png')";
-      addObstacles();
+      addObstacles(15);
     },
     update: () => {} // Moves food each frame
   }
 };
 
-const addObstacles = () => {
-  obstacles = Array.from({ length: 5 }, () => ({
+const addObstacles = (count = 5) => {
+  obstacles = Array.from({ length: count }, () => ({
     x: Math.floor(Math.random() * 30) + 1,
     y: Math.floor(Math.random() * 30) + 1,
+    dx: Math.random() > 0.5 ? 1 : -1, // Random movement direction on x-axis
+    dy: Math.random() > 0.5 ? 1 : -1, // Random movement direction on y-axis
   }));
 };
-
 const moveFood = () => {
   foodX = (foodX + 1) % 30 || 1; // Moves the food to the right
   foodY = (foodY + 1) % 30 || 1; // Moves the food downward

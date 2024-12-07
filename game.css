@@ -14,6 +14,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  overflow: hidden;
   background: linear-gradient(135deg, #01250c, #011109);
   color: #fff; /* Ensure all text contrasts with the background */
 }
@@ -151,13 +152,6 @@ background-size: contain
 }
 
 /* Difficulty Selector */
-.difficulty-selector {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
-}
-
 
 .difficulty-button {
   padding: 10px 20px;
@@ -196,20 +190,18 @@ background-size: contain
 
 }
 
-
-
 .difficulty-selector {
   display: flex;
   justify-content: center;
   gap: 15px;
-  margin: 0; 
-
-  position: absolute;
-  bottom: 24px; 
+  position: absolute; 
   left: 50%;
+  bottom:0%;
   transform: translateX(-50%);
   width: 10%; 
 }
+
+
 /* Obstacles Styling */
 .play-board .obstacle {
   background: url('https://www.shareicon.net/data/512x512/2015/10/17/657482_circle_512x512.png') no-repeat center center;

@@ -158,11 +158,13 @@ header nav ul li a:hover {
     border: 5px solid #614c37;
     border-radius: 10px;
     margin-bottom: 20px;
+    
 }
 
 .game-page p {
     font-size: 1.2rem;
 }
+
 
 /* Footer */
 footer {
